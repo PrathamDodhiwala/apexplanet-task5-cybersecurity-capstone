@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SecureBank Account Verification (SIMULATION)</title>
+<style>
+  body { font-family: Arial; background: #f4f4f4; margin:0; }
+  .banner { background: #b00020; color: white; text-align: center; padding: 8px; font-weight: bold; }
+  .container { max-width: 420px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+  .urgent { color: #b00020; font-weight: bold; }
+  input { width: 100%; padding: 8px; margin: 8px 0; box-sizing: border-box; }
+  button { width: 100%; padding: 10px; background: #1a73e8; color: white; border: none; border-radius: 4px; }
+  .flags { max-width: 420px; margin: 20px auto; background: #fff8e1; padding: 15px; border-radius: 8px; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="banner">TRAINING SIMULATION - NOT A REAL SITE - NO DATA IS COLLECTED</div>
+<div class="container">
+  <h2>SecureBank</h2>
+  <p class="urgent">Your account will be suspended in 24 hours. Verify now to avoid loss of access.</p>
+  <input type="text" placeholder="Username">
+  <input type="password" placeholder="Password">
+  <button onclick="showResult()">Verify Account</button>
+  <p id="result" style="margin-top:15px;"></p>
+</div>
+<div class="flags">
+  <b>Red flags in this page:</b>
+  <ul>
+    <li>Urgency/fear language ("suspended in 24 hours")</li>
+    <li>Generic greeting, no personalization</li>
+    <li>Mismatched/suspicious domain (check the real URL bar)</li>
+    <li>Request for full login credentials via a link, not the real app</li>
+  </ul>
+</div>
+<script>
+function showResult(){
+  document.getElementById('result').innerHTML =
+    "This was a simulation. If this were real, you would have just handed your credentials to an attacker. No data was collected or sent anywhere.";
+}
+</script>
+</body>
+</html>
